@@ -24,7 +24,7 @@ public class SplitController {
 
         System.out.println("Reached " + userProfile.getUserName());
         if(userProfile.getUserName() == null){
-            return new ResponseEntity<String>("User Already present", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Please Enter Valid User Data", HttpStatus.BAD_REQUEST);
         }
         boolean isUserRegistered = splitServices.registerUser(userProfile);
         if(userProfile != null && isUserRegistered == true)
